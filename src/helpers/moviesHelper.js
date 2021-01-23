@@ -5,3 +5,9 @@ export const getPopularMovies = async (page = 1) => {
     const resJson = await res.json()
     return resJson
 }
+
+export const getMovieById = async (id) => {
+    const res = await fetch(`${baseUrl}/${id}?api_key=${apiKey}&language=en-US`)
+    const resJson = await res.json()
+    return resJson
+}
